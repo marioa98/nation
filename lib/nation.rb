@@ -14,7 +14,6 @@ class Nation
 
      @stored_info = {:name => nation_general[0], :capital => nation_general[1], :continent => nation_general[2], :region => nation_general[3], :population => nation_general[4], :languages => nation_general[5], :about_country => info_country}
 
-#   puts @stored_info 
   end
 
   def info_to_json
@@ -22,10 +21,11 @@ class Nation
   end
 
   def info_to_html
-
+    HtmlFile.convert_html_file(@stored_info)
   end
 end
 
 require './nation/nation_general'
 require './nation/nation_info'
 require './nation/templates/json_file'
+require './nation/templates/html_file'
