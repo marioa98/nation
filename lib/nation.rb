@@ -14,6 +14,8 @@ class Nation
 
      @stored_info = {:name => nation_general[0], :capital => nation_general[1], :continent => nation_general[2], :region => nation_general[3], :population => nation_general[4], :languages => nation_general[5], :about_country => info_country}
 
+     @stored_info
+
   end
 
   def info_to_json
