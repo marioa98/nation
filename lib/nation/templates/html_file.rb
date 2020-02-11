@@ -1,9 +1,9 @@
-class Nation::HtmlFile
+class HtmlFile
   def self.convert_html_file(json_object)
     path = "./nation_files/html" 
     file_name = "#{json_object[:name]}_info_#{Time.now.strftime("%d%m%Y%H%M")}"
 
-    Dir.mkdir(path) if Dir.exist?(path) == false
+    # Dir.mkdir(path) if Dir.exist?(path) == false
 
     html = File.new("#{path}/#{file_name}.html", "w+")
 
