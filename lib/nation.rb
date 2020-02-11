@@ -4,6 +4,7 @@ require 'json'
 class Nation
   def initialize(nation_name)
     @nation_info = {}
+    @nation_name = nation_name
     @nation_code = standarize(nation_name)
   end
 
@@ -21,8 +22,6 @@ class Nation
   end
 end
 
-nation = Nation.new("United Kingdom")
-puts nation.nation_code
 # require './nation/nation_general'
 # require './nation/nation_info'
 # require './nation/templates/json_file'
