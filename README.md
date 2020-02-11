@@ -1,16 +1,20 @@
 # nation :earth_americas:
 
-"nation" is a ruby gem generated during the Tango trainee program as a practice to improve the Ruby skills and get knowledge about the process to make a new gem
+"nation" is a ruby gem generated during the Tango trainee program as a practice to improve the Ruby skills and get knowledge about the process to make a new gem.
 
-**Official site:** https://rubygems.org/gems/nation
+**Official site:** https://rubygems.org/gems/nation.
+
+**Version:** 0.1.0.
 
 ## Installation
 
 Via Git:
-> git clone https://github.com/marioa98/nation.git
+
+` git clone https://github.com/marioa98/nation.git `
 
 Via Gem :gem:
-> gem install nation
+
+` gem install nation `
 
 ## Brief info about the gem
 
@@ -31,23 +35,19 @@ Could be useful for people who wants to develop something which includes world i
 
 Once that you have installed the gem you must to include it in your project
 
-> require 'nation'
+` require 'nation' `
 
-Because *nation* implements instance method, you must to create a new object to initialize the class (no paramethers needed)
+Then, you must to create an instance of the main class (*Nation* in nation.rb) inside of your project and call the methods that you want.
 
-> nation = Nation.new
+``` 
+nation = Nation.new("Mexico")
+nation.get_info # Gets the info of the country choosen and store the information in a Hash.
+nation.print_file(<hash_object>, <file_extension>) # For now just json and html extension supported.
 
-Then, you can use the methods inside the main class *Nation* inside of the file nation.rb
+```
 
 ## Methods
 
-These all the methods inside of the *Nation* class. All of them delegates to the others classes inside of the gem, which are in charge of do the process
-
-| Method name | Functionality | Files used | How to call it |
-| ----------- | ------------- | ---------- | -------------- |
-| nation_info | Gathers all the info about the country (the data mentioned in the list) | nation_general.rb and nation.info.rb | nation.nation_info(<country_name>) |
-| info_to_json | Write a json file with the information collected and saved at the same level of the gem folder. You must to call first the nation_info method | json_file.rb | nation.info_to_json |
-| info_to_html | Write a html file with the information collected and saved at the same level of the gem folder. You must to call first the nation_info method | html_file.rb 	 nation.info_to_html |
 
 
 ## API's used :electric_plug:
